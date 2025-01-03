@@ -1,0 +1,42 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "title": "menu1",
+      "image": "assets/images/menu1.jpeg",
+      "description": "menu1 description",
+      "mark": 1,
+      "approved": true,
+      "reservations": [
+        1,
+        2,
+        5,
+        5
+      ]
+    },
+    {
+      "id": "2",
+      "title": "menu2",
+      "image": "assets/images/menu2.jpg",
+      "description": "menu2 description",
+      "mark": 2.5,
+      "approved": true,
+      "reservations": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "3f96",
+      "title": "hello",
+      "description": "ghaithoun tahfoun",
+      "approved": false,
+      "mark": 0,
+      "reservations": [
+        2
+      ]
+    }
+  ]
+}

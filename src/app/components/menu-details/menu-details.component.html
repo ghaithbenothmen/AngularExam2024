@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card">
+      <img [src]="menu.image" class="card-img-top" alt="{{menu.title}}" width="600px" height="400px"/>
+      <div class="card-body">
+
+        <h5 class="card-title">{{menu.title}}</h5>
+        <p class="card-text">{{menu.description}}</p>
+      
+            <p *ngIf="menu.mark else alt">Mark : {{menu.mark}}</p>
+ 
+
+        <ng-template #alt>
+            <p style="color: red;">aucune note a cette menu</p>
+        </ng-template>
+
+
+        <form [formGroup]="noteForm" (ngSubmit)="addNote()">
+            <div class="form-group">
+                <label for="name">Note</label>
+                <input type="number" class="form-control" id="note" formControlName="note" >
+                <p *ngIf="noteForm.get('note')?.invalid && noteForm.get('note')?.touched" class="text-danger">Note doit etre entre 1 et 5</p>
+            </div>
+         
+            <button class="btn btn-primary" type="submit">Add Note</button>
+        </form>
+      
+        <a routerLink="/" class="btn btn-secondary">Back to Menu</a>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Menu</h1>
+        <div *ngFor="let menu of menus" class="mb-3">
+          <div class="card" *ngIf="menu.approved">
+            <img [src]="menu.image" class="card-img-top" alt="{{menu.title}}" width="400px" height="250px" />
+            <div class="card-body" >
+              <h5 class="card-title">{{menu.title}}</h5>
+              <p class="card-text">{{menu.description}}</p>
+                <a [routerLink]="['/menu/menudetails',menu.id]" class="btn btn-primary">Détails</a>
+
+                <button (click)="addReservation(menu.id)">reserver</button>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
